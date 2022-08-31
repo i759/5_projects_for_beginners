@@ -1,0 +1,139 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=0, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Javascript on Steroids</title>
+  </head>
+  <body>
+    <div class="container-1">
+      <h2>Challenge1: Your age in days</h2>
+      <div class="flex-box-container-1">
+        <div>
+          <button class="btn btn-primary" onclick="ageInDays()">
+            click me
+          </button>
+        </div>
+        <div>
+          <button class="btn btn-danger" onclick="reset()">reset</button>
+        </div>
+      </div>
+      <div class="flex-box-container-1">
+        <div id="flex-box-result"></div>
+      </div>
+    </div>
+    <div class="container-2">
+      <h2>Challenge2: Cat Generator</h2>
+      <button
+        class="btn btn-success"
+        id="cat-generator"
+        onclick="generateCat()"
+      >
+        generate cat
+      </button>
+      <div class="flex-box-container-2" id="flex-cat-gen"></div>
+    </div>
+
+    <div class="container-3">
+      <h2>Challenge3: Rock, Paper, Scissors</h2>
+      <div class="flex-box-rps" id="flex-box-rps-div">
+        <img
+          id="rock"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT68Fmx9Z58GJPI-yGUWYGGDzcZ6YsmMrWN4Srp--0iMIT0bpON6RAZt49qhU5I_MdvGwQ&usqp=CAU"
+          height="150"
+          width="150"
+          alt=""
+          onclick="rpsGame(this)"
+        />
+        <img
+          id="paper"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmkT5tPq6ubQB07lY-07gHV6LH8Gi8gP22paxkHkEx5NDEM5xdE7Z1PVmevv1QNlC9alU&usqp=CAU"
+          height="150"
+          width="150"
+          alt=""
+          onclick="rpsGame(this)"
+        />
+        <img
+          id="scissors"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaBBtFw7kAz2K2G7bQ02qcOd0D7OrcAdDwYC1gwwNndzuctcwOj1GuDPBZmFV4dGuoZ7s&usqp=CAU"
+          height="150"
+          width="150"
+          alt=""
+          onclick="rpsGame(this)"
+        />
+      </div>
+    </div>
+
+    <div class="container-4">
+      <h2 id="change-my-color">Challenge4: Change The Color Of All Buttons!</h2>
+      <div class="flex-box-pick-color">
+        <form action="">
+          <select
+            name="backdrop"
+            id="background"
+            onchange="buttonColorChange(this)"
+          >
+            <option value="random">Random</option>
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="reset">Reset</option>
+          </select>
+        </form>
+
+        <button class="btn btn-primary">wee!</button>
+        <button class="btn btn-danger">Yahoo!</button>
+        <button class="btn btn-warning">G-mail</button>
+        <button class="btn btn-success">Skype</button>
+      </div>
+    </div>
+
+    <div class="container-5">
+      <h2>Challenge5: Blackjack!</h2>
+      <h3><span id="blackjack-result"> Let's play</span></h3>
+
+      <div class="flex-blackjack-row-1">
+        <div id="your-box">
+          <h2>You:<span id="your-blackjack-result">0</span></h2>
+        </div>
+
+        <div id="dealer-box">
+          <h2>Dealer:<span id="dealer-blackjack-result">0</span></h2>
+        </div>
+      </div>
+
+      <div class="flex-blackjack-row-2">
+        <button class="btn-lg btn-primary mr-2" id="blackjack-hit-button">
+          Hit
+        </button>
+        <button class="btn-lg btn-warning mr-2" id="blackjack-stand-button">
+          Stand
+        </button>
+        <button class="btn-lg btn-danger" id="blackjack-deal-button">
+          Deal
+        </button>
+      </div>
+
+      <div class="flex-blackjack-row-3">
+        <table>
+          <tr>
+            <th>wins</th>
+            <th>losses</th>
+            <th>draws</th>
+          </tr>
+
+          <tr>
+            <td><span id="wins">0</span></td>
+            <td><span id="looses">0</span></td>
+            <td><span id="draws">0</span></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
